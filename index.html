@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THQIR Agency</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Arial;
+  background:#000;
+  color:#fff;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  position:fixed;
+  width:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:1000;
+}
+
+.logo{font-size:24px;font-weight:bold;}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:radial-gradient(circle,#2b0000,#000);
+}
+
+.hero h1{
+  font-size:60px;
+  animation:fade 1.5s;
+}
+
+.hero p{color:#ccc;margin-top:10px;}
+
+.btn{
+  margin-top:20px;
+  padding:15px 30px;
+  background:red;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  box-shadow:0 0 20px red;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 40px red;
+}
+
+/* FEATURES */
+.features{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#1a1a1a;
+  padding:25px;
+  width:260px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* PORTFOLIO */
+.portfolio{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.portfolio img{
+  width:300px;
+  border-radius:10px;
+  margin:10px;
+}
+
+/* PRICING */
+.pricing{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.price{
+  background:#111;
+  padding:30px;
+  display:inline-block;
+  border-radius:20px;
+}
+
+.price h3{font-size:30px;}
+
+/* CONTACT */
+.contact{
+  padding:80px 20px;
+  text-align:center;
+}
+
+input,textarea{
+  width:80%;
+  padding:12px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+}
+
+button{
+  padding:15px 30px;
+  background:red;
+  border:none;
+  color:white;
+  border-radius:30px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  color:white;
+  font-size:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">THQIR</div>
+</nav>
+
+<section class="hero">
+  <h1>We Build Websites That Sell</h1>
+  <p>Modern. Fast. High-Converting.</p>
+  <a href="#pricing" class="btn">Start Now</a>
+</section>
+
+<section class="features">
+  <h2>Why Us</h2>
+  <div class="cards">
+    <div class="card">🔥 Premium Design</div>
+    <div class="card">⚡ Fast Delivery</div>
+    <div class="card">💰 Built to Convert</div>
+  </div>
+</section>
+
+<section class="portfolio">
+  <h2>Our Work</h2>
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+</section>
+
+<section class="pricing" id="pricing">
+  <h2>Pricing</h2>
+  <div class="price">
+    <h3>$49</h3>
+    <p>Full Website</p>
+    <a href="#contact" class="btn">Order</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Order Now</h2>
+  <form onsubmit="sendMsg(event)">
+    <input placeholder="Name" required><br>
+    <input placeholder="Email" required><br>
+    <textarea placeholder="Your project"></textarea><br>
+    <button>Send</button>
+  </form>
+</section>
+
+<a class="whatsapp" href="https://wa.me/989XXXXXXXXX">💬</a>
+
+<footer>
+  © 2026 THQIR Agency
+</footer>
+
+<script>
+function sendMsg(e){
+  e.preventDefault();
+  alert("Message sent!");
+}
+</script>
+
+</body>
+</html>
